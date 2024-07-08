@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bio Data Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #2E2E2E; /* dark gray background */
+    color: #FFF; /* white text */
+  }
+
+  form {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #454545; /* dark gray border */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #800000;
+    background-color: #333333; /* dark background */
+  }
+
+  h2 {
+    color: #F4AF37; /* gold text */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: #FFD700; /* light gold text */
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #D3D3D3; /* light gray text */
+  }
+
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], select, textarea, input[type="url"] {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #444; /* dark gray background */
+    color: #FFF; /* white text */
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+
+  input[type="text"]:hover, input[type="email"]:hover, input[type="tel"]:hover, input[type="date"]:hover, input[type="number"]:hover, select:hover, textarea:hover, input[type="url"]:hover {
+    border-color: #666;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #555; /* slightly lighter gray background */
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background-color: #800000; /* maroon background */
+    color: #FFF; /* white text */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #B22222; /* firebrick background */
+  }
+
+  input[type="submit"]:active {
+    background-color: #8B0000; /* darker maroon background */
+    transform: scale(0.95); /* slight shrink on click */
+  }
+
+  .section {
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .personal-info {
+    background-color: #800000; /* maroon background */
+  }
+
+  .personal-info:hover {
+    box-shadow: 0 0 10px rgba(128, 0, 0, 0.7);
+    background-color: #990000; /* lighter maroon background */
+  }
+
+  .contact-info {
+    background-color: #B8860B; /* dark goldenrod background */
+  }
+
+  .contact-info:hover {
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.7);
+    background-color: #DAA520; /* goldenrod background */
+  }
+
+  .education {
+    background-color: #8B4513; /* saddle brown background */
+  }
+
+  .education:hover {
+    box-shadow: 0 0 10px rgba(139, 69, 19, 0.7);
+    background-color: #A0522D; /* sienna background */
+  }
+
+  .work-experience {
+    background-color: #CD853F; /* peru background */
+  }
+
+  .work-experience:hover {
+    box-shadow: 0 0 10px rgba(205, 133, 63, 0.7);
+    background-color: #DEB887; /* burlywood background */
+  }
+
+  .skills {
+    background-color: #4B0082; /* indigo background */
+  }
+
+  .skills:hover {
+    box-shadow: 0 0 10px rgba(75, 0, 130, 0.7);
+    background-color: #6A5ACD; /* slate blue background */
+  }
+
+  .social-media {
+    background-color: #2E8B57; /* sea green background */
+  }
+
+  .social-media:hover {
+    box-shadow: 0 0 10px rgba(46, 139, 87, 0.7);
+    background-color: #3CB371; /* medium sea green background */
+  }
+</style>
+
+</head>
+<body>
+  <form>
+    <h2>Bio Data Form</h2>
+    
+    <!-- Personal Information -->
+    <div class="section personal-info">
+      <h3>Personal Information</h3>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName">
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName">
+
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName" name="middleName">
+
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input type="date" id="dateOfBirth" name="dateOfBirth">
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    
+    <!-- Contact Information -->
+    <div class="section contact-info">
+      <h3>Contact Information</h3>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address"></textarea>
+    </div>
+    
+    <!-- Education -->
+    <div class="section education">
+      <h3>Education</h3>
+      <label for="highestQualification">Highest Qualification:</label>
+      <input type="text" id="highestQualification" name="highestQualification">
+
+      <label for="institute">Institute:</label>
+      <input type="text" id="institute" name="institute">
+       
+      <label for="yearOfPassing">Year of Passing:</label>
+      <input type="number" id="yearOfPassing" name="yearOfPassing">
+    </div>
+    
+    <!-- Work Experience -->
+    <div class="section work-experience">
+      <h3>Work Experience</h3>
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" name="companyName">
+
+      <label for="jobTitle">Job Title:</label>
+      <input type="text" id="jobTitle" name="jobTitle">
+
+      <label for="fromDate">From Date:</label>
+      <input type="date" id="fromDate" name="fromDate">
+
+      <label for="toDate">To Date:</label>
+      <input type="date" id="toDate" name="toDate">
+    </div>
+    
+    <!-- Skills -->
+    <div class="section skills">
+      <h3>Skills</h3>
+      <label for="technicalSkills">Technical Skills:</label>
+      <textarea id="technicalSkills" name="technicalSkills"></textarea>
+
+      <label for="languageSkills">Language Skills:</label>
+      <textarea id="languageSkills" name="languageSkills"></textarea>
+    </div>
+    
+    <!-- Social Media Accounts -->
+    <div class="section social-media">
+      <h3>Social Media Accounts</h3>
+      <label for="linkedin">LinkedIn:</label>
+      <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com">
+
+      <label for="instagram">Instagram:</label>
+      <input type="url" id="instagram" name="instagram" placeholder="https://www.instagram.com">
+
+      <label for="Twitter">Twitter:</label>
+      <input type="text" id="Twitter" name="Twitter">
+
+      <label for="snapchat">Snapchat:</label>
+      <input type="text" id="snapchat" name="snapchat">
+
+    </div>
+    
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
